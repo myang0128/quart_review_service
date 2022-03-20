@@ -23,6 +23,9 @@ QuartSchema(app)
 class Query:
     a: Optional[int] = None
 
+@app.route("/")
+async def hello():
+    return "aaaaa"
 
 @app.route("/api/v1/review")
 @validate_querystring(RequestParam)
